@@ -1,96 +1,78 @@
-Ray Peat Legacy - Bioenergetic Knowledge Platform
-Created by Aryan Dakhare
-Contact: dakharearyan863@gmail.com | +91 8208513278
-GitHub: https://github.com/aryandakhare
+# Ray Peat Legacy - Bioenergetic Knowledge Platform
+
+**Created by Aryan Dakhare**  
+**Contact:** dakharearyan863@gmail.com | +91 8208513278  
+**GitHub:** [https://github.com/aryandakhare](https://github.com/aryandakhare)
 
 A comprehensive AI-powered platform to preserve and share Dr. Ray Peat's bioenergetic philosophy through an interactive, searchable knowledge base of his complete corpus of work.
 
-Project Vision
+## Project Vision
+
 This platform serves as a posthumous digital legacy for Dr. Ray Peat, the renowned biologist and health researcher. It provides an accessible, intelligent interface for people to learn about bioenergetic thinking, explore specific health topics, and understand Ray Peat's unique approach to biological processes.
 
-Mission: To democratize access to Ray Peat's vast knowledge and enable anyone to think bioenergetically about health and biology.
+**Mission**: To democratize access to Ray Peat's vast knowledge and enable anyone to think bioenergetically about health and biology.
 
-Features
-🔍 Intelligent Search: Query Ray Peat's entire corpus using natural language
+## Features
 
-🥗 Food & Nutrition Insights: Learn about specific foods from his perspective
+- 🔍 **Intelligent Search**: Query Ray Peat's entire corpus using natural language
+- 🥗 **Food & Nutrition Insights**: Learn about specific foods from his perspective  
+- 🧬 **Hormonal Analysis**: Understand hormone interactions and optimization
+- 🔬 **Biological Process Exploration**: Deep dive into Ray Peat's unique biological thinking
+- 📚 **Complete Corpus Access**: All transcripts, articles, books, and interviews
+- 🎯 **Personalized Learning**: AI-guided exploration based on your interests
+- 📱 **Modern Interface**: Clean, responsive web application
 
-🧬 Hormonal Analysis: Understand hormone interactions and optimization
+## Dataset Overview
 
-🔬 Biological Process Exploration: Deep dive into Ray Peat's unique biological thinking
-
-📚 Complete Corpus Access: All transcripts, articles, books, and interviews
-
-🎯 Personalized Learning: AI-guided exploration based on your interests
-
-📱 Modern Interface: Clean, responsive web application
-
-Dataset Overview
 Our comprehensive dataset includes:
 
-Audio Transcripts: 188+ podcast interviews and radio shows
+- **Audio Transcripts**: 188+ podcast interviews and radio shows
+- **Publications**: 96+ academic papers and articles  
+- **Health Topics**: 98+ specialized health discussions
+- **Newsletters**: 59+ newsletter articles
+- **Academic Documents**: Thesis and foundational papers
+- **Email Communications**: Selected correspondence
+- **Special Collections**: Rare interviews and discussions
 
-Publications: 96+ academic papers and articles
+**Total**: 552 documents representing decades of bioenergetic research and thinking.
 
-Health Topics: 98+ specialized health discussions
+## Technical Architecture
 
-Newsletters: 59+ newsletter articles
-
-Academic Documents: Thesis and foundational papers
-
-Email Communications: Selected correspondence
-
-Special Collections: Rare interviews and discussions
-
-Total: 552 documents representing decades of bioenergetic research and thinking.
-
-Technical Architecture
-Data Pipeline
-text
+### Data Pipeline
+```
 Raw Data → Quality Analysis → AI-Powered Cleaning → Segmentation → Embedding → Vector Storage
-System Components
-Data Processing (data/)
+```
 
-Raw corpus storage and organization
+### System Components
 
-Quality analysis and scoring
+1. **Data Processing** (`data/`)
+   - Raw corpus storage and organization
+   - Quality analysis and scoring
+   - Processed and cleaned datasets
 
-Processed and cleaned datasets
+2. **Preprocessing & Cleaning** (`preprocessing/`)
+   - AI-powered text cleaning and correction
+   - Document segmentation and speaker attribution
+   - Quality assessment and validation
 
-Preprocessing & Cleaning (preprocessing/)
+3. **Embedding & Vectorization** (`embedding/`)
+   - Text embedding using Gemini API or Hugging Face
+   - Vector storage management
+   - Similarity search optimization
 
-AI-powered text cleaning and correction
+4. **Inference Backend** (`inference/`)
+   - RAG (Retrieval-Augmented Generation) system
+   - API endpoints for frontend communication
+   - LLM integration and fine-tuning
 
-Document segmentation and speaker attribution
+5. **Web UI Frontend** (`web_ui/`)
+   - React-based user interface
+   - Interactive search and exploration
+   - Responsive design for all devices
 
-Quality assessment and validation
+## Project Structure
 
-Embedding & Vectorization (embedding/)
-
-Text embedding using Gemini API or Hugging Face
-
-Vector storage management
-
-Similarity search optimization
-
-Inference Backend (inference/)
-
-RAG (Retrieval-Augmented Generation) system
-
-API endpoints for frontend communication
-
-LLM integration and fine-tuning
-
-Web UI Frontend (web_ui/)
-
-React-based user interface
-
-Interactive search and exploration
-
-Responsive design for all devices
-
-Project Structure
-text
+```
 PeatLearn/
 ├── data/                           # Data storage and management
 │   ├── raw/                       # Original source files
@@ -112,116 +94,113 @@ PeatLearn/
 ├── docs/                          # Documentation and requirements
 ├── config/                        # Configuration files
 └── logs/                          # Application logs
-Quick Start
-Prerequisites
-Python 3.9+
+```
 
-Node.js 16+ (for frontend)
+## Quick Start
 
-Gemini API key or Hugging Face access
+### Prerequisites
+- Python 3.9+
+- Node.js 16+ (for frontend)
+- Gemini API key or Hugging Face access
+- 8GB+ RAM recommended
 
-8GB+ RAM recommended
+### Setup
 
-Setup
-Clone and Setup Environment
-
-bash
+1. **Clone and Setup Environment**
+```bash
 git clone https://github.com/aryandakhare/PeatLearn.git
 cd PeatLearn
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-Configure Environment Variables
+```
 
-bash
+2. **Configure Environment Variables**
+```bash
 cp .env.template .env
 # Edit .env with your API keys:
 # GEMINI_API_KEY=your_key_here
-Process the Data
+```
 
-bash
+3. **Process the Data**
+```bash
 # Run data cleaning pipeline
 cd preprocessing/cleaning
 python main_pipeline.py --limit 10  # Start with sample
 
 # Full processing
 python main_pipeline.py
-Generate Embeddings
+```
 
-bash
+4. **Generate Embeddings**
+```bash
 cd ../../embedding
 python embed_corpus.py
-Start Backend Server
+```
 
-bash
+5. **Start Backend Server**
+```bash
 cd ../inference/backend
 python app.py
-Launch Frontend
+```
 
-bash
+6. **Launch Frontend**
+```bash
 cd ../../web_ui/frontend
 npm install
 npm start
-Development Workflow
-Data Quality Assessment: Run quality analysis on new data
+```
 
-Preprocessing: Clean and segment documents using AI pipeline
+### Development Workflow
 
-Embedding: Generate vector representations
+1. **Data Quality Assessment**: Run quality analysis on new data
+2. **Preprocessing**: Clean and segment documents using AI pipeline
+3. **Embedding**: Generate vector representations
+4. **Backend Development**: Implement RAG and API endpoints
+5. **Frontend Development**: Build user interface features
+6. **Testing**: Validate system components
+7. **Deployment**: Deploy to production environment
 
-Backend Development: Implement RAG and API endpoints
+## Data Processing Pipeline
 
-Frontend Development: Build user interface features
+### Stage 1: Quality Analysis
+- Automated scoring of document quality
+- Identification of processing requirements
+- Categorization by content type and complexity
 
-Testing: Validate system components
+### Stage 2: AI-Powered Cleaning
+- **Tier 1** (27% of files): Rules-based cleaning for high-quality documents
+- **Tier 2** (73% of files): AI-powered cleaning for complex documents
+  - OCR error correction
+  - Document segmentation  
+  - Speaker attribution
+  - Text enhancement
 
-Deployment: Deploy to production environment
+### Stage 3: Embedding Generation
+- Text vectorization using state-of-the-art models
+- Semantic search optimization
+- Vector database storage
 
-Data Processing Pipeline
-Stage 1: Quality Analysis
-Automated scoring of document quality
+### Stage 4: RAG Implementation
+- Retrieval-augmented generation system
+- Context-aware response generation
+- Fine-tuned models for Ray Peat's style
 
-Identification of processing requirements
+## API Documentation
 
-Categorization by content type and complexity
+### Core Endpoints
 
-Stage 2: AI-Powered Cleaning
-Tier 1 (27% of files): Rules-based cleaning for high-quality documents
-
-Tier 2 (73% of files): AI-powered cleaning for complex documents
-
-OCR error correction
-
-Document segmentation
-
-Speaker attribution
-
-Text enhancement
-
-Stage 3: Embedding Generation
-Text vectorization using state-of-the-art models
-
-Semantic search optimization
-
-Vector database storage
-
-Stage 4: RAG Implementation
-Retrieval-augmented generation system
-
-Context-aware response generation
-
-Fine-tuned models for Ray Peat's style
-
-API Documentation
-Core Endpoints
-text
+```
 GET  /api/search?q={query}           # Search corpus
 POST /api/ask                        # Ask questions
 GET  /api/topics                     # Browse topics
 GET  /api/documents/{id}             # Get document
 GET  /api/recommendations            # Get recommendations
-Example Usage
-javascript
+```
+
+### Example Usage
+
+```javascript
 // Search for information about thyroid
 const response = await fetch('/api/search?q=thyroid function metabolism');
 const results = await response.json();
@@ -234,135 +213,110 @@ const answer = await fetch('/api/ask', {
     context: "nutrition"
   })
 });
-Performance Metrics
-Processing Speed: 2-5 files/second (rules-based), 1 file/10-30s (AI-powered)
+```
 
-Search Latency: <200ms average response time
+## Performance Metrics
 
-Accuracy: 95%+ relevance for domain-specific queries
+- **Processing Speed**: 2-5 files/second (rules-based), 1 file/10-30s (AI-powered)
+- **Search Latency**: <200ms average response time
+- **Accuracy**: 95%+ relevance for domain-specific queries
+- **Coverage**: 100% of Ray Peat's public corpus
+- **Uptime**: 99.9% availability target
 
-Coverage: 100% of Ray Peat's public corpus
+## Contributing
 
-Uptime: 99.9% availability target
-
-Contributing
 We welcome contributions to enhance the Ray Peat Legacy platform:
 
-Data Quality: Improve cleaning algorithms and quality assessment
+1. **Data Quality**: Improve cleaning algorithms and quality assessment
+2. **Search Enhancement**: Better embedding models and retrieval systems
+3. **UI/UX**: Frontend improvements and new features
+4. **Documentation**: Help others understand Ray Peat's work
+5. **Testing**: Ensure system reliability and accuracy
 
-Search Enhancement: Better embedding models and retrieval systems
+### Development Guidelines
 
-UI/UX: Frontend improvements and new features
+- Follow clean code principles
+- Write comprehensive tests
+- Document all functions and APIs
+- Use meaningful commit messages
+- Ensure responsive design
 
-Documentation: Help others understand Ray Peat's work
+## Technology Stack
 
-Testing: Ensure system reliability and accuracy
+### Backend
+- **Python**: Core processing and API development
+- **FastAPI**: High-performance API framework
+- **Gemini API**: AI-powered text processing
+- **ChromaDB/Pinecone**: Vector database
+- **PostgreSQL**: Metadata storage
 
-Development Guidelines
-Follow clean code principles
+### Frontend  
+- **React**: Modern UI framework
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first styling
+- **React Query**: Data fetching and caching
 
-Write comprehensive tests
+### AI/ML
+- **Google Gemini**: LLM for understanding and generation
+- **Hugging Face**: Alternative embedding models
+- **LangChain**: RAG orchestration
+- **Transformers**: Model management
 
-Document all functions and APIs
+## Deployment
 
-Use meaningful commit messages
-
-Ensure responsive design
-
-Technology Stack
-Backend
-Python: Core processing and API development
-
-FastAPI: High-performance API framework
-
-Gemini API: AI-powered text processing
-
-ChromaDB/Pinecone: Vector database
-
-PostgreSQL: Metadata storage
-
-Frontend
-React: Modern UI framework
-
-TypeScript: Type-safe development
-
-Tailwind CSS: Utility-first styling
-
-React Query: Data fetching and caching
-
-AI/ML
-Google Gemini: LLM for understanding and generation
-
-Hugging Face: Alternative embedding models
-
-LangChain: RAG orchestration
-
-Transformers: Model management
-
-Deployment
-Local Development
-bash
+### Local Development
+```bash
 docker-compose up -d  # Start all services
-Production
-Frontend: Vercel/Netlify deployment
+```
 
-Backend: Google Cloud Run or AWS Lambda
+### Production
+- **Frontend**: Vercel/Netlify deployment
+- **Backend**: Google Cloud Run or AWS Lambda
+- **Database**: Managed PostgreSQL + Vector DB
+- **CDN**: Global content delivery
 
-Database: Managed PostgreSQL + Vector DB
+## Roadmap
 
-CDN: Global content delivery
+### Phase 1: Foundation (Current)
+- ✅ Data processing pipeline
+- ✅ Quality analysis system
+- ⏳ AI-powered cleaning
+- ⏳ Basic RAG implementation
 
-Roadmap
-Phase 1: Foundation (Current)
-✅ Data processing pipeline
+### Phase 2: Core Platform
+- 🔄 Advanced search capabilities
+- 🔄 Web interface development
+- 🔄 API optimization
+- 🔄 User experience testing
 
-✅ Quality analysis system
+### Phase 3: Enhancement
+- ⏳ Fine-tuned models
+- ⏳ Personalization features
+- ⏳ Mobile application
+- ⏳ Community features
 
-⏳ AI-powered cleaning
+### Phase 4: Scale
+- ⏳ Multi-language support
+- ⏳ Advanced analytics
+- ⏳ Educational content
+- ⏳ Research tools
 
-⏳ Basic RAG implementation
+## License
 
-Phase 2: Core Platform
-🔄 Advanced search capabilities
-
-🔄 Web interface development
-
-🔄 API optimization
-
-🔄 User experience testing
-
-Phase 3: Enhancement
-⏳ Fine-tuned models
-
-⏳ Personalization features
-
-⏳ Mobile application
-
-⏳ Community features
-
-Phase 4: Scale
-⏳ Multi-language support
-
-⏳ Advanced analytics
-
-⏳ Educational content
-
-⏳ Research tools
-
-License
 This project is developed for educational and research purposes to preserve and share Dr. Ray Peat's scientific contributions.
 
-Acknowledgments
-Dr. Ray Peat: For his groundbreaking work in bioenergetic medicine
+## Acknowledgments
 
-Contributors: Everyone helping to preserve and share this knowledge
+- **Dr. Ray Peat**: For his groundbreaking work in bioenergetic medicine
+- **Contributors**: Everyone helping to preserve and share this knowledge
+- **Community**: Ray Peat enthusiasts and researchers worldwide
 
-Community: Ray Peat enthusiasts and researchers worldwide
+---
 
-"Energy and structure are interdependent at every level." - Ray Peat
+**"Energy and structure are interdependent at every level."** - Ray Peat
 
-For questions, suggestions, or contributions, please contact:
-Aryan Dakhare
-Email: dakharearyan863@gmail.com
-Phone: +91 8208513278
-GitHub: https://github.com/aryandakhare
+For questions, suggestions, or contributions, please contact:  
+**Aryan Dakhare**  
+Email: dakharearyan863@gmail.com  
+Phone: +91 8208513278  
+GitHub: [https://github.com/aryandakhare](https://github.com/aryandakhare)
